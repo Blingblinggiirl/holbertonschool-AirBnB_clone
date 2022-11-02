@@ -1,0 +1,18 @@
+footer {
+    background-color: #00FF00;
+    height: 60px;
+    width: 100%;
+    margin-top: 100%;
+}
+
+footer .container {
+    height: 100%;
+    width: 100%;
+    display: table;
+}
+
+.container p {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+}
