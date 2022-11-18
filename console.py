@@ -22,5 +22,19 @@ class HBNBCommand(cmd.Cmd):
         """EOF command to exit the program"""
         return True
 
+    def do create(self, arg):
+        """create a new instance"""
+        args = args.split()
+        if len(my_args) == 0:
+            print("** class name missing **")
+            return
+        try:
+            new_instance = eval(args[0])()
+            new_instance.save()
+            print(new_instance.id)
+        except Exception:
+            print("** class doesn't exist **")
+
+
 if __name__ == '__main__':
     HBNBCommand().cmdloop()
