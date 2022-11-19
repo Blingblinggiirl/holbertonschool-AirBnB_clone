@@ -17,6 +17,7 @@ dictionary = {"Amenity": Amenity,
               "Review": Review,
               "State": State}
 
+
 class HBNBCommand(cmd.Cmd):
     """command interpreter"""
     prompt = "(hbnb) "
@@ -137,6 +138,7 @@ class HBNBCommand(cmd.Cmd):
                 print("** no instance found **")
                 return
         print("** class doesn't exist **")
+
 
 if __name__ == '__main__':
     HBNBCommand().cmdloop()
