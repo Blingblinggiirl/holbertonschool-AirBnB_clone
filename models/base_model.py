@@ -26,6 +26,7 @@ class BaseModel:
             self.id = str(uuid4())
             self.created_at = datetime.now()
             self.updated_at = datetime.now()
+        models.storage.new(self)
 
     def to_dict(self):
         """ This will be return a dictionary that contains
@@ -39,6 +40,7 @@ class BaseModel:
     def save(self):
         """ this is useful when you update and has the current time """
         self.updated_at = datetime.now()
+        models.storage.save()
 
     def __str__(self):
         """ String rep of the model """
