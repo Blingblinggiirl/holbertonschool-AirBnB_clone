@@ -1,6 +1,5 @@
 #!/usr/bin/python3
 """base class"""
-import json
 from uuid import uuid4
 from datetime import datetime
 import models
@@ -9,9 +8,10 @@ import models
 class BaseModel:
     """ This will be define all common attributes/methods
     for other classes """
+    
+    var = "%Y-%m-%dT%H:%M:%S.%f"
 
     def __init__(self, *args, **kwargs):
-        var = "%Y-%m-%dT%H:%M:%S.%f"
         if kwargs:
             for key, value in kwargs.items():
                 if key == "id":
